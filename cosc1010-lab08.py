@@ -1,8 +1,8 @@
-# Your Name Here
+# Aidan Mayo
 # UWYO COSC 1010
 # Submission Date
-# Lab XX
-# Lab Section:
+# Lab 08
+# Lab Section:12
 # Sources, people worked with, help given to:
 # your
 # comments
@@ -14,7 +14,23 @@
 # Other wise return the converted int or float 
 # Floats should only have one decimal point in them 
 
+def convert(value):
+    if value.isdigit() or (value[0] == '-' and value[1:].isdigit()):
+        return int(value)
+    if value.count('.') == 1:
+        left, right = value.split('.')
+        if (left.isdigit() or (left.startswith('-') and left[1:].digit())) and right.isdigit():
+            return float(value)
+    return False
 
+user_input = input("Input a number:")
+result = convert(user_input)
+
+if result is False:
+    print("Input could not be converted")
+else:
+    print("The converted value is:", result)
+        
 print("*" * 75)
 
 
@@ -38,6 +54,29 @@ print("*" * 75)
 # Remember all inputs are strings, but the function needs ints or floats
 # Call your function and print the resulting list
 
+def function(m, x, b):
+    return f"m={m}, x={x}, b={b}"
+while True:
+    m = input("Please enter a value for m or Type 'Exit' to exit to loop")
+    if m.lower() == "Exit":
+        break
+    elif not m.isdigit():
+        print("Please input a valid integer for m")
+
+    x = input("Please enter a value for x or Type 'Exit' to exit to loop")
+    if x.lower == "Exit":
+        break
+    elif not x.isdigit():
+        print("Please input a valid integer for x")
+
+    b = input("Please input a value for b or Type 'Exit' to exit to loop")
+    if b.lower == "Exit":
+        break
+    elif not b.isdigit():
+        break
+m, x, b = int(m). int(x), int(b)
+y = m * x + b
+print(f"y = {y}")
 print("*" * 75)
 
 
@@ -48,3 +87,26 @@ print("*" * 75)
 # Create a loop like above to prompt the user for input for the three values
 # Create a second function that just does the square root operation 
     # If the number you are trying to take the square root of is negative, return null
+def function(a, b, c):
+    return f"a={a}, b={b}, c={c}"
+while True:
+    a = input("Please enter a value for a or Type 'Exit' to exit to loop")
+    if a.lower() == "Exit":
+        break
+    elif not a.isdigit():
+        print("Please input a valid integer for a")
+
+    b = input("Please enter a value for b or Type 'Exit' to exit to loop")
+    if b.lower == "Exit":
+        break
+    elif not b.isdigit():
+        print("Please input a valid integer for b")
+
+    c = input("Please input a value for c or Type 'Exit' to exit to loop")
+    if c.lower == "Exit":
+        break
+    elif not c.isdigit():
+        break
+a, b, c = int(a). int(b), int(c)
+x1 = -{b}+**0.5 {b}**2 - 4*{a}*{c}
+print(f"x = {x}")
